@@ -15,4 +15,12 @@ export default class App extends React.Component {
       { label: "for label", important: false, done: false, id: this.minID++ }
     ]
   };
+  render() {
+    return (
+      <div className="app">
+        <h1>Поиск элементов</h1>
+        <List someProps={this.state.someData} />
+      </div>
+    );
+  }
 }
