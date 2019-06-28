@@ -1,5 +1,5 @@
 import React from "react";
-
+import List from "./list";
 export default class App extends React.Component {
   minID = 10;
   state = {
