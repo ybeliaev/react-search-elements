@@ -1,5 +1,6 @@
 import React from "react";
 import List from "./list";
+import SearchPanel from "./search-panel";
 export default class App extends React.Component {
   minID = 10;
   state = {
@@ -19,6 +20,7 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <h1>Поиск элементов</h1>
+        <SearchPanel />
         <List someProps={this.state.someData} />
       </div>
     );
