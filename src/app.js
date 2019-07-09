@@ -16,11 +16,12 @@ export default class App extends React.Component {
       { label: "for label", important: false, done: false, id: this.minID++ }
     ]
   };
+
   render() {
     return (
       <div className="app">
         <h1>Поиск элементов</h1>
-        <SearchPanel />
+        <SearchPanel makeSearchChange={this.makeSearch} />
         <List someProps={this.state.someData} />
       </div>
     );
