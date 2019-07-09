@@ -7,9 +7,8 @@ export default class SearchPanel extends React.Component {
   onSearchChange = e => {
     const term = e.target.value;
     this.setState({ term });
-    console.log(term);
+
     this.props.makeSearchChange(term);
-    console.log("****" + term);
   };
   render() {
     return (
