@@ -14,8 +14,21 @@ export default class App extends React.Component {
       },
       { label: "third label", important: false, done: false, id: this.minID++ },
       { label: "for label", important: false, done: false, id: this.minID++ }
-    ]
+    ],
+    search: ""
   };
+
+  makeSearch = search => {
+    this.setState({ search });
+  };
+  search(items, search) {
+    if (search === 0) {
+      return items;
+    }
+    return items.filter(elem => {
+      return elem.label.toLowerCase().indexOf(search.toLowerCase()) > -1;
+    });
+  }
 
   render() {
     return (
