@@ -23,7 +23,7 @@ export default class App extends React.Component {
   };
   search(items, term) {
     //term - текст, который ищем
-    if (term === 0) {
+    if (term.length === 0) {
       return items;
     }
     return items.filter(elem => {
@@ -38,7 +38,7 @@ export default class App extends React.Component {
       <div className="app">
         <h1>Поиск элементов</h1>
         <SearchPanel makeSearchChange={this.makeSearch} />
-        <List someProps={this.state.someData} />
+        <List someProps={visibleItems} />
       </div>
     );
   }
