@@ -18,8 +18,8 @@ export default class App extends React.Component {
     term: ""
   };
 
-  makeSearch = search => {
-    this.setState({ search });
+  makeSearch = term => {
+    this.setState({ term });
   };
   search(items, term) {
     //term - текст, который ищем
